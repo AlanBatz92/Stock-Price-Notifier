@@ -39,8 +39,8 @@ def clean_text(text):
 
 
 def email_notifier(percentage):
-  sender = "alan.batz92@gmail.com"
-  receiver = "505maximus@gmail.com"
+  sender = os.getenv('EMAIL_SENDER')
+  receiver = os.getenv("EMAIL_RECEIVER")
   subject = "Crobex stock price has dropped below -0.04%"
   contents = f"The current Crobex stock price is at {percentage}%."
 
